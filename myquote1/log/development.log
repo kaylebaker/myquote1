@@ -1,0 +1,43 @@
+Started GET "/" for 127.0.0.1 at 2023-08-29 17:39:45 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/student/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 633)
+Completed 200 OK in 23ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 7368)
+
+
+Started GET "/" for 127.0.0.1 at 2023-08-29 17:42:19 +0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 311.0ms | Allocations: 86639)
+Completed 200 OK in 315ms (Views: 312.8ms | ActiveRecord: 0.0ms | Allocations: 87599)
+
+
+Started GET "/" for 127.0.0.1 at 2023-08-29 17:46:42 +0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 13709)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 14611)
+
+
+Started GET "/" for 127.0.0.1 at 2023-08-29 17:46:57 +0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 74.6ms | Allocations: 33319)
+Completed 200 OK in 84ms (Views: 77.6ms | ActiveRecord: 0.0ms | Allocations: 37258)
+
+
+Started GET "/about" for 127.0.0.1 at 2023-08-29 17:47:03 +0800
+Processing by AboutController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2478)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 3121)
+
+
