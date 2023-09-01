@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Quote lists</h1>
+
+<div id="quote_lists">
+  <% @quote_lists.each do |quote_list| %>
+    <%= render quote_list %>
+    <p>
+      <%= link_to "Show this quote list", quote_list %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New quote list", new_quote_list_path %>

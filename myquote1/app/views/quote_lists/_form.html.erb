@@ -1,0 +1,32 @@
+<%= form_with(model: quote_list) do |form| %>
+  <% if quote_list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(quote_list.errors.count, "error") %> prohibited this quote_list from being saved:</h2>
+
+      <ul>
+        <% quote_list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :quote_id, style: "display: block" %>
+    <%= form.text_field :quote_id %>
+  </div>
+
+  <div>
+    <%= form.label :philosopher_id, style: "display: block" %>
+    <%= form.text_field :philosopher_id %>
+  </div>
+
+  <div>
+    <%= form.label :category_id, style: "display: block" %>
+    <%= form.text_field :category_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

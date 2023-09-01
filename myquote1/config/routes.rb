@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :categories
+  resources :quote_lists
+  resources :philosophers
+  resources :quotes
+  resources :users
   #get 'about/index'
   #get 'home/index'
   root 'home#index'
