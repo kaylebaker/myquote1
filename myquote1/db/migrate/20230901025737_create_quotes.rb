@@ -5,6 +5,7 @@ class CreateQuotes < ActiveRecord::Migration[7.0]
       t.integer :publication_year
       t.text :comment
       t.references :user, null: false, foreign_key: true
+      t.references :philosopher, null: false, foreign_key: true
 
       t.timestamps
     end
