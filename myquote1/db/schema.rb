@@ -62,7 +62,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_01_030629) do
   end
 
   add_foreign_key "quote_lists", "categories"
+  add_foreign_key "quote_lists", "philosophers"
   add_foreign_key "quote_lists", "quotes"
   add_foreign_key "quotes", "users"
-  add_foreign_key "quotes", "philosophers"
 end
