@@ -151,3 +151,264 @@ Migrating to CreateCategories (20230901030629)
   [1m[36mPhilosopher Create (1.7ms)[0m  [1m[32mINSERT INTO "philosophers" ("fname", "lname", "birth_year", "death_year", "biography", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "John"], ["lname", "Locke"], ["birth_year", 1632], ["death_year", 1704], ["biography", "John Locke was an English philosopher and physician. He is regarded as one of the most influential Enlightenment thinkers and is known for his ideas on individual rights and the social contract."], ["created_at", "2023-09-19 02:12:24.613661"], ["updated_at", "2023-09-19 02:12:24.613661"]]
   [1m[36mTRANSACTION (22.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mPhilosopher Load (0.3ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (1.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Metaphysics"], ["created_at", "2023-09-19 02:22:47.909403"], ["updated_at", "2023-09-19 02:22:47.909403"]]
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Epistemology"], ["created_at", "2023-09-19 02:23:02.385017"], ["updated_at", "2023-09-19 02:23:02.385017"]]
+  [1m[36mTRANSACTION (22.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ethics"], ["created_at", "2023-09-19 02:23:02.525693"], ["updated_at", "2023-09-19 02:23:02.525693"]]
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Aesthetics"], ["created_at", "2023-09-19 02:23:02.673312"], ["updated_at", "2023-09-19 02:23:02.673312"]]
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Logic"], ["created_at", "2023-09-19 02:23:02.830634"], ["updated_at", "2023-09-19 02:23:02.830634"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Political Philosophy"], ["created_at", "2023-09-19 02:23:02.989765"], ["updated_at", "2023-09-19 02:23:02.989765"]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Philosophy of Mind"], ["created_at", "2023-09-19 02:23:03.149914"], ["updated_at", "2023-09-19 02:23:03.149914"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (1.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Philosophy of Language"], ["created_at", "2023-09-19 02:23:03.337930"], ["updated_at", "2023-09-19 02:23:03.337930"]]
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Philosophy of Science"], ["created_at", "2023-09-19 02:23:03.484359"], ["updated_at", "2023-09-19 02:23:03.484359"]]
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Philosophy of Religion"], ["created_at", "2023-09-19 02:23:03.629637"], ["updated_at", "2023-09-19 02:23:03.629637"]]
+  [1m[36mTRANSACTION (21.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Existentialism"], ["created_at", "2023-09-19 02:23:03.778684"], ["updated_at", "2023-09-19 02:23:03.778684"]]
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Eastern Philosophy"], ["created_at", "2023-09-19 02:23:03.934708"], ["updated_at", "2023-09-19 02:23:03.934708"]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (3.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Feminist Philosophy"], ["created_at", "2023-09-19 02:23:04.104311"], ["updated_at", "2023-09-19 02:23:04.104311"]]
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nihilism"], ["created_at", "2023-09-19 02:23:04.233614"], ["updated_at", "2023-09-19 02:23:04.233614"]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (9.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Philosophy of Technology"], ["created_at", "2023-09-19 02:23:04.375542"], ["updated_at", "2023-09-19 02:23:04.375542"]]
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Philosophy of Education"], ["created_at", "2023-09-19 02:23:04.567229"], ["updated_at", "2023-09-19 02:23:04.567229"]]
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Pragmatism"], ["created_at", "2023-09-19 02:23:04.696204"], ["updated_at", "2023-09-19 02:23:04.696204"]]
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rationalism"], ["created_at", "2023-09-19 02:23:08.294655"], ["updated_at", "2023-09-19 02:23:08.294655"]]
+  [1m[36mTRANSACTION (21.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Create (2.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Empiricism"], ["created_at", "2023-09-19 02:23:08.319097"], ["updated_at", "2023-09-19 02:23:08.319097"]]
+  [1m[36mTRANSACTION (26.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mPhilosopher Load (0.5ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."first_name" = ?[0m  [["first_name", "Jean"]]
+  [1m[36mPhilosopher Load (0.5ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."first_name" = ?[0m  [["first_name", "Soren"]]
+  [1m[36mPhilosopher Load (0.3ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."fname" = ?[0m  [["fname", "Soren"]]
+  [1m[36mPhilosopher Load (0.5ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."fname" = ?[0m  [["fname", "Jean"]]
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPhilosopher Create (0.4ms)[0m  [1m[32mINSERT INTO "philosophers" ("fname", "lname", "birth_year", "death_year", "biography", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["fname", "Jean-Jacques"], ["lname", "Rousseau"], ["birth_year", 1712], ["death_year", 1778], ["biography", "Jean-Jacques Rousseau was a French philosopher, writer, and composer. He is best known for his social contract theory and his belief in the natural goodness of humans."], ["created_at", "2023-09-19 02:37:14.619844"], ["updated_at", "2023-09-19 02:37:14.619844"]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixForeignKeysInQuotes (20230919025829)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quote_text","publication_year","comment","user_id","created_at","updated_at")
+                     SELECT "id","quote_text","publication_year","comment","user_id","created_at","updated_at" FROM "quotes"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_81116b59fc"
+FOREIGN KEY ("philosopher_id")
+  REFERENCES "philosophers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixForeignKeysInQuotes (20230919025829)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quote_text","publication_year","comment","user_id","created_at","updated_at")
+                     SELECT "id","quote_text","publication_year","comment","user_id","created_at","updated_at" FROM "quotes"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_81116b59fc"
+FOREIGN KEY ("philosopher_id")
+  REFERENCES "philosophers" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixForeignKeysInQuotes (20230919025829)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquote_lists" ("id" integer NOT NULL PRIMARY KEY, "quote_id" integer NOT NULL, "philosopher_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_category_id" ON "aquote_lists" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_philosopher_id" ON "aquote_lists" ("philosopher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_quote_id" ON "aquote_lists" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquote_lists" ("id","quote_id","philosopher_id","category_id","created_at","updated_at")
+                     SELECT "id","quote_id","philosopher_id","category_id","created_at","updated_at" FROM "quote_lists"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "quote_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "quote_lists" ("id" integer NOT NULL PRIMARY KEY, "quote_id" integer NOT NULL, "philosopher_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_73be524cd6"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+, CONSTRAINT "fk_rails_fbdb3897aa"
+FOREIGN KEY ("quote_id")
+  REFERENCES "quotes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_quote_id" ON "quote_lists" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_philosopher_id" ON "quote_lists" ("philosopher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_category_id" ON "quote_lists" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quote_lists" ("id","quote_id","philosopher_id","category_id","created_at","updated_at")
+                     SELECT "id","quote_id","philosopher_id","category_id","created_at","updated_at" FROM "aquote_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aquote_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quote_text","publication_year","comment","user_id","created_at","updated_at")
+                     SELECT "id","quote_text","publication_year","comment","user_id","created_at","updated_at" FROM "quotes"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_81116b59fc"
+FOREIGN KEY ("philosopher_id")
+  REFERENCES "philosophers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixForeignKeysInQuotes (20230919025829)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquote_lists" ("id" integer NOT NULL PRIMARY KEY, "quote_id" integer NOT NULL, "philosopher_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_category_id" ON "aquote_lists" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_philosopher_id" ON "aquote_lists" ("philosopher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_quote_id" ON "aquote_lists" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquote_lists" ("id","quote_id","philosopher_id","category_id","created_at","updated_at")
+                     SELECT "id","quote_id","philosopher_id","category_id","created_at","updated_at" FROM "quote_lists"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "quote_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "quote_lists" ("id" integer NOT NULL PRIMARY KEY, "quote_id" integer NOT NULL, "philosopher_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_73be524cd6"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+, CONSTRAINT "fk_rails_fbdb3897aa"
+FOREIGN KEY ("quote_id")
+  REFERENCES "quotes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_quote_id" ON "quote_lists" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_philosopher_id" ON "quote_lists" ("philosopher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_category_id" ON "quote_lists" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quote_lists" ("id","quote_id","philosopher_id","category_id","created_at","updated_at")
+                     SELECT "id","quote_id","philosopher_id","category_id","created_at","updated_at" FROM "aquote_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aquote_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquote_lists" ("id" integer NOT NULL PRIMARY KEY, "quote_id" integer NOT NULL, "philosopher_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_category_id" ON "aquote_lists" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_philosopher_id" ON "aquote_lists" ("philosopher_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aquote_lists_on_quote_id" ON "aquote_lists" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquote_lists" ("id","quote_id","philosopher_id","category_id","created_at","updated_at")
+                     SELECT "id","quote_id","philosopher_id","category_id","created_at","updated_at" FROM "quote_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "quote_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "quote_lists" ("id" integer NOT NULL PRIMARY KEY, "quote_id" integer NOT NULL, "category_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_fbdb3897aa"
+FOREIGN KEY ("quote_id")
+  REFERENCES "quotes" ("id")
+, CONSTRAINT "fk_rails_73be524cd6"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_quote_id" ON "quote_lists" ("quote_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quote_lists_on_category_id" ON "quote_lists" ("category_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quote_lists" ("id","quote_id","category_id","created_at","updated_at")
+                     SELECT "id","quote_id","category_id","created_at","updated_at" FROM "aquote_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aquote_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "quotes" ADD "philosopher_id" integer[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aquotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "philosopher_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "tindex_aquotes_on_user_id" ON "aquotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aquotes" ("id","quote_text","publication_year","comment","user_id","created_at","updated_at","philosopher_id")
+                     SELECT "id","quote_text","publication_year","comment","user_id","created_at","updated_at","philosopher_id" FROM "quotes"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "quotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "quotes" ("id" integer NOT NULL PRIMARY KEY, "quote_text" text NOT NULL, "publication_year" integer DEFAULT NULL, "comment" text DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "philosopher_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_02b555fb4d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_81116b59fc"
+FOREIGN KEY ("philosopher_id")
+  REFERENCES "philosophers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_quotes_on_user_id" ON "quotes" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "quotes" ("id","quote_text","publication_year","comment","user_id","created_at","updated_at","philosopher_id")
+                     SELECT "id","quote_text","publication_year","comment","user_id","created_at","updated_at","philosopher_id" FROM "aquotes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aquotes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230919025829"]]
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhilosopher Load (0.2ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuote Create (1.6ms)[0m  [1m[32mINSERT INTO "quotes" ("quote_text", "publication_year", "comment", "user_id", "created_at", "updated_at", "philosopher_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["quote_text", "Life is not a problem to be solved, but a reality to be experienced."], ["publication_year", nil], ["comment", "A fundamental existential insight by Kierkegaard."], ["user_id", 3], ["created_at", "2023-09-19 03:09:26.538037"], ["updated_at", "2023-09-19 03:09:26.538037"], ["philosopher_id", 1]]
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+  [1m[36mPhilosopher Load (0.2ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ?[0m  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mQuote Create (0.3ms)[0m  [1m[32mINSERT INTO "quotes" ("quote_text", "publication_year", "comment", "user_id", "created_at", "updated_at", "philosopher_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["quote_text", "Act only according to that maxim whereby you can at the same time will that it should become a universal law."], ["publication_year", 1785], ["comment", "Kant's categorical imperative."], ["user_id", 2], ["created_at", "2023-09-19 03:11:46.648141"], ["updated_at", "2023-09-19 03:11:46.648141"], ["philosopher_id", 4]]
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
