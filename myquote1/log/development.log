@@ -412,3 +412,16 @@ FOREIGN KEY ("philosopher_id")
   [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   [1m[36mQuote Create (0.3ms)[0m  [1m[32mINSERT INTO "quotes" ("quote_text", "publication_year", "comment", "user_id", "created_at", "updated_at", "philosopher_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["quote_text", "Act only according to that maxim whereby you can at the same time will that it should become a universal law."], ["publication_year", 1785], ["comment", "Kant's categorical imperative."], ["user_id", 2], ["created_at", "2023-09-19 03:11:46.648141"], ["updated_at", "2023-09-19 03:11:46.648141"], ["philosopher_id", 4]]
   [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mQuoteList Create (0.4ms)[0m  [1m[32mINSERT INTO "quote_lists" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 1], ["category_id", 11], ["created_at", "2023-09-19 03:20:26.872773"], ["updated_at", "2023-09-19 03:20:26.872773"]]
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mQuoteList Create (0.3ms)[0m  [1m[32mINSERT INTO "quote_lists" ("quote_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["quote_id", 2], ["category_id", 3], ["created_at", "2023-09-19 03:21:56.054622"], ["updated_at", "2023-09-19 03:21:56.054622"]]
+  [1m[36mTRANSACTION (17.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mQuoteList Load (0.2ms)[0m  [1m[34mSELECT "quote_lists".* FROM "quote_lists"[0m
