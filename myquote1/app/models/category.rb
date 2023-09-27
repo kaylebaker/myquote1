@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-    has_many :quote, through: :quote_lists
+    has_many :quotes, through: :quote_lists
 end

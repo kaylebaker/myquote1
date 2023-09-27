@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_19_025829) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_27_034151) do
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_025829) do
 
   create_table "philosophers", force: :cascade do |t|
     t.string "fname", null: false
-    t.string "lname", null: false
+    t.string "lname"
     t.integer "birth_year"
     t.integer "death_year"
     t.text "biography", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_025829) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "philosopher_id"
+    t.boolean "isPublic"
     t.index ["user_id"], name: "index_quotes_on_user_id"
   end
 
