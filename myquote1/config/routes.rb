@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   #get 'home/index'
   root 'home#index'
   get '/about', to: 'about#index'
+
+  # User authentication sessions
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
