@@ -1,2 +1,14 @@
 <h1>Welcome to MyQuote</h1>
 <p>The place for all your philosophical quotes!</p>
+<h3>Recently Added Quotes</h3>
+
+<hr />
+<% @quotes.each do |quote| %>
+    <div class="card bg-body-tertiary" style="margin-bottom:10px">
+    <div class="card-body">
+        <h4 class="card-title"><%= quote.quote_text %></h4>
+        <p class="card-text"><%= quote.philosopher.fname %> <%= quote.philosopher.lname %></p>
+        <span class="small-italic-text" style="font-size:0.8em; font-style:italic">Uploaded by <%= quote.user.fname %> <%= quote.user.lname %></span>
+    </div>
+    </div>
+<% end %>
