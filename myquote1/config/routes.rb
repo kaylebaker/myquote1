@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
+  # User view routes
+  get '/admin', to: 'home#aindex'
+  get '/userhome', to: 'home#uindex'
+  get '/your-quotes', to: 'home#uquotes'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
