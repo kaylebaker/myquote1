@@ -1,9 +1,10 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
+  before_action :require_login, except: [:index, :show]
 
   # GET /quotes or /quotes.json
   def index
-    @quotes = Quote.all
+    @quotes = current_user.quotes
   end
 
   # GET /quotes/1 or /quotes/1.json
@@ -13,6 +14,7 @@ class QuotesController < ApplicationController
   # GET /quotes/new
   def new
     @quote = Quote.new
+    1.times { @quote.quote_lists.build }
   end
 
   # GET /quotes/1/edit
@@ -65,6 +67,6 @@ class QuotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quote_params
-      params.require(:quote).permit(:quote_text, :publication_year, :comment)
+      params.require(:quote).permit(:quote_text, :publication_year, :comment, :isPublic, :user_id, :philosopher_id, quote_lists_attributes: [:id, :category_id])
     end
 end
