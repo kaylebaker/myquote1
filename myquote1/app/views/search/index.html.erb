@@ -10,8 +10,13 @@
     <% if @categorymatch.present? %>
         <h4 style="padding-top:15px;">Results:</h4>
             <!-- Cycle through each category returned and print category name and quote and link to view -->
-            <% @quote_texts.each do |quote_text| %>
-                <p><%= quote_text %></p>
+            <% @categorymatch.each do |cm| %>
+                <div class="card bg-body-tertiary" style="margin-bottom:10px">
+                <div class="card-body">
+                    <h4 class="card-title"><%= cm.quote.quote_text %></h4>
+                    <p class="card-text"><a href="/philosophers/<%=cm.quote.philosopher_id%>"><%= "#{cm.quote.philosopher.fname} #{cm.quote.philosopher.lname}" %></a></p>
+                </div>
+                </div>
             <% end %>              
             <br />
     <% else %>

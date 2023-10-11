@@ -1,11 +1,11 @@
 <div id="<%= dom_id user %>">
   <p>
-    <strong>Fname:</strong>
+    <strong>First Name:</strong>
     <%= user.fname %>
   </p>
 
   <p>
-    <strong>Lname:</strong>
+    <strong>Last Name:</strong>
     <%= user.lname %>
   </p>
 
@@ -18,10 +18,14 @@
     <strong>Current Password: </strong><span class="text-danger">ENCRYPTED</span>
   </p>
 
-  <p>
-    <strong>Is admin:</strong>
-    <%= user.is_admin %>
-  </p>
+  <<strong>Account Type:</strong>
+    <p>
+      <% if user.is_admin %>
+        <span>Administrator</span>
+      <% else %>
+        <span>Standard User</span>
+      <% end %>
+    </p>
 
   <p>
     <strong>Status:</strong>
