@@ -45,15 +45,20 @@
   <div id="categories-container">
       <% @quote.quote_lists.each do |ql| %>
 
+        <!-- Create a dropdown box that contains all categories. -->
         <%= f.fields_for :quote_lists do |quote_list| %>
           <div class="category-field row mb-2">
             <div class="col-auto">
               <%= quote_list.label :category_id, "Category", class: "form-label d-inline-block me-2" %>
               <%= quote_list.select :category_id, Category.all.collect { |cg| [cg.name, cg.id] }, { include_blank: true }, class: "form-control d-inline-block" %>
             </div>
+
+            <!-- This is commented out because a Quote can only have one category. Possible implementation of more than one later
             <div class="col-auto align-self-end">
               <%= link_to '[-] Remove this category', '#', class: 'remove-category', style: "color: red; text-decoration: none;" %>
             </div>
+            -->
+            
           </div>
         <% end %>        
       <% end %>
@@ -64,6 +69,7 @@
   </div>
 <% end %>
 
+<!--
 <script>
 // Wait for the document to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -83,3 +89,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+-->

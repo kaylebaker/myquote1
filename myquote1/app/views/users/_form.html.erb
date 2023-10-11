@@ -27,6 +27,7 @@
     <%= form.password_field :password, placeholder: 'Choose a strong password', class: 'form-control', readonly: (logged_in? && is_administrator?) %>
   </div>
 
+  <!-- Check if user is an administrator and allow them to adjust admin priviledges and status-->
   <div class="form-group" style="padding-bottom: 10px;">
     <% if logged_in? && is_administrator? %>
       <%= form.label :is_admin do %>
