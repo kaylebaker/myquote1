@@ -13,6 +13,7 @@ class QuotesController < ApplicationController
   # GET /quotes/new
   def new
     @quote = Quote.new
+    1.times { @quote.quote_lists.build }
   end
 
   # GET /quotes/1/edit
@@ -65,6 +66,6 @@ class QuotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quote_params
-      params.require(:quote).permit(:quote_text, :publication_year, :comment)
+      params.require(:quote).permit(:quote_text, :publication_year, :comment, :isPublic, :user_id, :philosopher_id, quote_lists_attributes: [:id, :category_id])
     end
 end
