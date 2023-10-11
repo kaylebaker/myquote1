@@ -21,6 +21,7 @@ class PhilosophersController < ApplicationController
 
   # POST /philosophers or /philosophers.json
   def create
+    @philosopher = Philosopher.new(philosopher_params)
     respond_to do |format|
       if @philosopher.save
         format.html { redirect_to philosopher_url(@philosopher), notice: "Philosopher was successfully created." }
