@@ -31,7 +31,7 @@
     <% if logged_in? && is_administrator? %>
       <%= form.label :is_admin do %>
         Admin Role
-        <%= form.check_box :is_administrator %>
+        <%= form.check_box :is_admin %>
       <% end %>
     <% else %>
       <%= form.hidden_field :is_admin, value: false %>
