@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
+    # Make sure only Admins can see all users
     if logged_in? && is_administrator?
       @users = User.all
     elsif logged_in? && !is_administrator?

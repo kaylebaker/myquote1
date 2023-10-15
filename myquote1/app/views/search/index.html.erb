@@ -9,7 +9,8 @@
 <% if params[:category_query].present? %>
     <% if @categorymatch.present? %>
         <h4 style="padding-top:15px;">Results:</h4>
-            <!-- Cycle through each category returned and print category name and quote and link to view -->
+
+            <!-- Cycle through each category returned and display all quotes with tahat category and the philsopher underneath -->
             <% @categorymatch.each do |cm| %>
                 <div class="card bg-body-tertiary" style="margin-bottom:10px">
                 <div class="card-body">

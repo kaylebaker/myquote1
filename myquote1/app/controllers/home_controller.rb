@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    @quotes = Quote.includes(:categories).take(5)
+    # Sort the quotes in descending order by timestamp and grab the first five
+    @quotes = Quote.order(created_at: :desc).where(isPublic: true).take(5)
   end
 
   def uquotes
