@@ -44,13 +44,24 @@
     </p>
   </div>
 
-  <!-- Select existing category -->
-  <div class="form-group" style="padding-bottom: 10px;">
-    <p>
-    Category:
-    <%= f.collection_select :category_id, Category.all, :id, :name, class: 'form-control' %>
-    </p>
+  <!-- Choose categories -->
+  <div id="categories-container">
+      <% @quote.quote_lists.each do |quote_list| %>
+
+        <%= f.fields_for :quote_lists, quote_list do |ql| %>
+          <div class="category-field row mb-2">
+            <div class="col-auto">
+              <%= ql.label :category_id, "Category", class: "form-label d-inline-block me-2" %>
+              <%= ql.select :category_id, Category.all.collect { |cg| [cg.name, cg.id] }, { include_blank: true }, class: "form-control d-inline-block" %>
+            </div>
+            <div class="col-auto align-self-end">
+              <%= link_to '[-] Remove this category', '#', class: 'remove-category', style: "color: red; text-decoration: none;" %>
+            </div>
+          </div>
+        <% end %>        
+      <% end %>
   </div>
+
 
   <!-- Add a conditional check to see if the quote is already in the database and display appropriate button text -->
   <div class="mt-3">
@@ -61,3 +72,23 @@
     <% end %>
   </div>
 <% end %>
+
+<script>
+// Wait for the document to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Attach an event listener to detect clicks on the "Remove this category" link
+  document.addEventListener('click', function(e) {
+    if (e.target && e.target.classList.contains('remove-category')) {
+      // Prevent the default action of the link
+      e.preventDefault();
+
+      // Get all the category fields
+      const categoryFields = document.querySelectorAll('.category-field');
+      // Only remove a category field if there's more than one
+      if (categoryFields.length > 1) {
+        e.target.closest('.category-field').remove();
+      }
+    }
+  });
+});
+</script>
