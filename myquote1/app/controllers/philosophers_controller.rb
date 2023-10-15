@@ -8,6 +8,9 @@ class PhilosophersController < ApplicationController
 
   # GET /philosophers/1 or /philosophers/1.json
   def show
+    # Set @quotes to only display quotes by this Philosopher
+    @philosopher = Philosopher.find(params[:id])
+    @quotes = Quote.where(philosopher: @philosopher)
   end
 
   # GET /philosophers/new

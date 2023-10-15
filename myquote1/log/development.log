@@ -21441,3 +21441,174 @@ Processing by SearchController#index as HTML
 Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.8ms | Allocations: 5944)
 
 
+  [1m[36mQuoteList Load (0.2ms)[0m  [1m[34mSELECT "quote_lists".* FROM "quote_lists"[0m
+Started GET "/" for 127.0.0.1 at 2023-10-15 19:49:36 +0800
+Processing by HomeController#index as HTML
+  [1m[36mQuote Load (0.2ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."isPublic" = ? ORDER BY "quotes"."created_at" DESC LIMIT ?[0m  [["isPublic", 1], ["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:12
+  [1m[36mPhilosopher Load (0.2ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:12
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:12
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:12
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:12
+  Rendered home/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 6907)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 11103)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 1.0ms | Allocations: 12663)
+
+
+Started GET "/your-quotes" for 127.0.0.1 at 2023-10-15 19:49:39 +0800
+Processing by HomeController#uquotes as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/uquotes.html.erb within layouts/application
+  [1m[36mQuote Load (0.8ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/views/home/uquotes.html.erb:5
+  [1m[36mQuoteList Load (0.2ms)[0m  [1m[34mSELECT "quote_lists".* FROM "quote_lists" WHERE "quote_lists"."quote_id" IN (?, ?, ?)[0m  [["quote_id", 3], ["quote_id", 4], ["quote_id", 9]]
+  ↳ app/views/home/uquotes.html.erb:5
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/uquotes.html.erb:10
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/uquotes.html.erb:10
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/uquotes.html.erb:10
+  Rendered home/uquotes.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3876)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 7050)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 1.4ms | Allocations: 7577)
+
+
+Started GET "/quotes/9" for 127.0.0.1 at 2023-10-15 19:49:44 +0800
+Processing by QuotesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/quotes_controller.rb:65:in `set_quote'
+  Rendering layout layouts/application.html.erb
+  Rendering quotes/show.html.erb within layouts/application
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/quotes/_quote.html.erb:9
+  Rendered quotes/_quote.html.erb (Duration: 2.7ms | Allocations: 940)
+  Rendered quotes/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1816)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 1002)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 5050)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 6136)
+
+
+Started GET "/philosophers/8" for 127.0.0.1 at 2023-10-15 19:49:46 +0800
+Processing by PhilosophersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/philosophers_controller.rb:62:in `set_philosopher'
+  Rendering layout layouts/application.html.erb
+  Rendering philosophers/show.html.erb within layouts/application
+  Rendered philosophers/_philosopher.html.erb (Duration: 1.0ms | Allocations: 266)
+  Rendered philosophers/show.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2543)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 2631)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.1ms | Allocations: 4356)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    11: 
+    12: <!-- Iterate through each quote in Quotes and display this Philosopher's quotes as a card -->
+    13: <hr />
+    14: <% @quotes.each.where(philosopher: @philosopher) do |quote| %>
+    15:     <div class="card bg-body-tertiary" style="margin-bottom:10px">
+    16:     <div class="card-body">
+    17:         <h4 class="card-title"><%= quote.quote_text %></h4>
+  
+app/views/philosophers/show.html.erb:14
+Started GET "/philosophers/8" for 127.0.0.1 at 2023-10-15 19:51:41 +0800
+Processing by PhilosophersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/philosophers_controller.rb:64:in `set_philosopher'
+  [1m[36mCACHE Philosopher Load (0.0ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/philosophers_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering philosophers/show.html.erb within layouts/application
+  Rendered philosophers/_philosopher.html.erb (Duration: 0.4ms | Allocations: 265)
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."philosopher_id" = ?[0m  [["philosopher_id", 8]]
+  ↳ app/views/philosophers/show.html.erb:14
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/philosophers/show.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/philosophers/show.html.erb:19
+  Rendered philosophers/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 10550)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 2129)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 26215)
+Completed 200 OK in 56ms (Views: 40.1ms | ActiveRecord: 2.1ms | Allocations: 34605)
+
+
+Started GET "/philosophers/8" for 127.0.0.1 at 2023-10-15 19:52:20 +0800
+Processing by PhilosophersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/philosophers_controller.rb:64:in `set_philosopher'
+  [1m[36mCACHE Philosopher Load (0.0ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/philosophers_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering philosophers/show.html.erb within layouts/application
+  Rendered philosophers/_philosopher.html.erb (Duration: 0.7ms | Allocations: 250)
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."philosopher_id" = ?[0m  [["philosopher_id", 8]]
+  ↳ app/views/philosophers/show.html.erb:15
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/philosophers/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/philosophers/show.html.erb:20
+  Rendered philosophers/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 3198)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 7137)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.5ms | Allocations: 8973)
+
+
+Started GET "/philosophers/8" for 127.0.0.1 at 2023-10-15 19:52:36 +0800
+Processing by PhilosophersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/philosophers_controller.rb:64:in `set_philosopher'
+  [1m[36mCACHE Philosopher Load (0.0ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/philosophers_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering philosophers/show.html.erb within layouts/application
+  Rendered philosophers/_philosopher.html.erb (Duration: 0.6ms | Allocations: 250)
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT "quotes".* FROM "quotes" WHERE "quotes"."philosopher_id" = ?[0m  [["philosopher_id", 8]]
+  ↳ app/views/philosophers/show.html.erb:16
+  [1m[36mPhilosopher Load (0.1ms)[0m  [1m[34mSELECT "philosophers".* FROM "philosophers" WHERE "philosophers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/philosophers/show.html.erb:20
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/philosophers/show.html.erb:21
+  Rendered philosophers/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3186)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 7122)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.5ms | Allocations: 8954)
+
+
