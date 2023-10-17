@@ -11,7 +11,7 @@
 
 <!-- Iterate through each quote in Quotes and display this Philosopher's quotes as a card -->
 <br />
-<h3>Quotes by this Philosopher</h3>
+<h3>Quotes by this Philosopher (public quotes only)</h3>
 <hr />
 <% @quotes.each do |quote| %>
     <div class="card bg-body-tertiary" style="margin-bottom:10px">
@@ -19,6 +19,9 @@
         <h4 class="card-title"><%= quote.quote_text %></h4>
         <p class="card-text"><%= quote.philosopher.fname %> <%= quote.philosopher.lname %></p>
         <span class="small-italic-text" style="font-size:0.8em; font-style:italic">Uploaded by <%= quote.user.fname %> <%= quote.user.lname %></span>
+        
+        <!-- Create href link to the quote page -->
+        <p class="card-text">[<a href="/quotes/<%=quote.id %>"><%= "More Details" %></a>]</p>
     </div>
     </div>
 <% end %>

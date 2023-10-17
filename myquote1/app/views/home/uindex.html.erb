@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
-<p>Hello <%= session[:fname] %></p>
-<h3>Standard User Landing Page</h3>
-<p>This is where general messages to the account holder would go</p>
+<h4>Hello <%= session[:fname] %>,</h4>
+<h3>Welcome to your Landing Page</h3>
+<br />
 
+<p>You have uploaded a total of <%= current_user.quotes.count %> quotes (<%= current_user.quotes.where(isPublic: true).count %> public and <%= current_user.quotes.where(isPublic: false).count %> private).</p>
+
+<br />
 <%= link_to "Edit your account details", edit_user_path(session[:user_id]) %>

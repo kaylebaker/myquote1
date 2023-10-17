@@ -1,5 +1,5 @@
 <h1>Welcome to MyQuote</h1>
-<p>The place for all your philosophical quotes!</p>
+<p>The place for all your philosophical quotes! Join today to upload your favourite quotes.</p>
 <h3>Recently Added Quotes</h3>
 
 <!-- Iterate through each quote in Quotes and display as a card on the home page -->
@@ -8,8 +8,11 @@
     <div class="card bg-body-tertiary" style="margin-bottom:10px">
     <div class="card-body">
         <h4 class="card-title"><%= quote.quote_text %></h4>
-        <p class="card-text"><%= quote.philosopher.fname %> <%= quote.philosopher.lname %></p>
-        <span class="small-italic-text" style="font-size:0.8em; font-style:italic">Uploaded by <%= quote.user.fname %> <%= quote.user.lname %></span>
+        <p class="card-text" style="font-size:1.0em; font-variant:small-caps">
+            <a href="/philosophers/<%= quote.philosopher_id%>"><%= quote.philosopher.fname %> <%= quote.philosopher.lname %></a>
+            <span class="small-caps-text" style="font-size:0.8em; font-variant:small-caps"> <%= quote.philosopher.birth_year %>-<%= quote.philosopher.death_year %></span>
+        </p>
+        <span class="small-italic-text" style="font-size:0.8em; font-style:italic">Uploaded by <%= quote.user.fname %> </span>
     </div>
     </div>
 <% end %>

@@ -10,7 +10,7 @@ class PhilosophersController < ApplicationController
   def show
     # Set @quotes to only display quotes by this Philosopher
     @philosopher = Philosopher.find(params[:id])
-    @quotes = Quote.where(philosopher: @philosopher)
+    @quotes = Quote.where(philosopher: @philosopher, isPublic: true)
   end
 
   # GET /philosophers/new
