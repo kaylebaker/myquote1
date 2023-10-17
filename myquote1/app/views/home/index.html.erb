@@ -12,6 +12,7 @@
             <a href="/philosophers/<%= quote.philosopher_id%>"><%= quote.philosopher.fname %> <%= quote.philosopher.lname %></a>
             <span class="small-caps-text" style="font-size:0.8em; font-variant:small-caps"> <%= quote.philosopher.birth_year %>-<%= quote.philosopher.death_year %></span>
         </p>
+        <p style="font-size:0.7em">[<a href="/quotes/<%=quote.id %>"><%= "See full quote" %></a>]</p>
         <span class="small-italic-text" style="font-size:0.8em; font-style:italic">Uploaded by <%= quote.user.fname %> </span>
     </div>
     </div>

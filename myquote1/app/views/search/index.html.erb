@@ -21,7 +21,8 @@
                 <div class="card bg-body-tertiary" style="margin-bottom:10px">
                 <div class="card-body">
                     <h4 class="card-title"><%= cm.quote.quote_text %></h4>
-                    <p class="card-text"><a href="/philosophers/<%=cm.quote.philosopher_id%>"><%= "#{cm.quote.philosopher.fname} #{cm.quote.philosopher.lname}" %></a></p>
+                    <p class="card-text" style="font-variant:small-caps"><a href="/philosophers/<%=cm.quote.philosopher_id%>"><%= "#{cm.quote.philosopher.fname} #{cm.quote.philosopher.lname}" %></a></p>
+                    <p style="font-size:0.7em">[<a href="/quotes/<%=cm.quote.id %>"><%= "See full quote" %></a>]</p>
                     <span class="small-italic-text" style="font-size:0.8em; font-style:italic">Uploaded by <%= cm.quote.user.fname %> </span>
                 </div>
                 </div>
